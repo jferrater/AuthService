@@ -19,3 +19,29 @@ Security Features to be implemented:
 1.) OAuth2, JWT and basic authentication
 </br>
 2.) Authorization policy-based webservice
+</br>
+<h4>Testing the application</h4>
+<lu>
+<li>clone this project</li>
+<li>mvn package</li>
+<li>java -jar target/authservice.0.0.1-SNAPSHOT.jar</li>
+<li>Verify available endpoints at localhost:8110</li>
+</lu>
+
+```javascript
+{
+  "_embedded" : {
+    "identity_providers" : [ ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8110/identity_providers"
+    },
+    "profile" : {
+      "href" : "http://localhost:8110/profile/identity_providers"
+    }
+  }
+}
+```
+
+
