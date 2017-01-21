@@ -30,15 +30,18 @@ Security Features to be implemented:
 
 ```javascript
 {
-  "_embedded" : {
-    "identity_providers" : [ ]
-  },
   "_links" : {
-    "self" : {
+    "identity_providers" : {
       "href" : "http://localhost:8110/identity_providers"
     },
+    "authorizations" : {
+      "href" : "http://localhost:8110/authorizations"
+    },
+    "clients" : {
+      "href" : "http://localhost:8110/clients"
+    },
     "profile" : {
-      "href" : "http://localhost:8110/profile/identity_providers"
+      "href" : "http://localhost:8110/profile"
     }
   }
 }
