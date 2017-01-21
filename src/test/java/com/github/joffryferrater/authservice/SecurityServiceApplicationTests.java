@@ -1,4 +1,4 @@
-package com.github.joffryferrater.securityservice;
+package com.github.joffryferrater.authservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.github.joffryferrater.securityservice;
+package com.github.joffryferrater.authservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

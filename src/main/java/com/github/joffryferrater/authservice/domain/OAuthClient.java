@@ -1,4 +1,4 @@
-package com.github.joffryferrater.securityservice.domain;
+package com.github.joffryferrater.authservice.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,9 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * OAuth client domain.
@@ -20,6 +22,8 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name="OAuthClients")
+@NoArgsConstructor(force=true)
+@AllArgsConstructor
 public class OAuthClient {
 
 	@Id

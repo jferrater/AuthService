@@ -1,11 +1,16 @@
-package com.github.joffryferrater.securityservice.domain;
+package com.github.joffryferrater.authservice.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Domain for Identity Management data
@@ -16,6 +21,8 @@ import lombok.Data;
 @Entity
 @Table (name="Idm")
 @Data
+@NoArgsConstructor(force=true)
+@AllArgsConstructor
 public class Idm {
 
 
@@ -25,6 +32,10 @@ public class Idm {
 		LDAP,
 		MYSQL;
 	}
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
 	
 	@JsonProperty("IDM_Type")
 	private final IdmType idmType;
