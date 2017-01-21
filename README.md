@@ -7,7 +7,7 @@ Objectives of this project is to create web services for the following:
 </br>
 2) Pluggable/externalize MySQL, LDAP and AD as identify provider for authentication
 </br>
-3) Authorization services
+3) Policy-based Authorization services
 </br>
 4) OAuth services
 </br>
