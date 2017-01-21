@@ -1,5 +1,5 @@
-# SecurityService
-I am making my own micro services app. This is a project using Spring Boot App and Spring LDAP to store my registered users.
+# AuthService
+This is a project using Java Spring Framework
 </br>
 Objectives of this project is to create web services for the following: 
 </br>
