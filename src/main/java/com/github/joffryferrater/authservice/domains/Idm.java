@@ -1,4 +1,4 @@
-package com.github.joffryferrater.authservice.domain;
+package com.github.joffryferrater.authservice.domains;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

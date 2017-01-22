@@ -1,9 +1,9 @@
-package com.github.joffryferrater.authservice.repository;
+package com.github.joffryferrater.authservice.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import com.github.joffryferrater.authservice.domain.Idm;
+import com.github.joffryferrater.authservice.domains.Idm;
 
 /**
  *  
