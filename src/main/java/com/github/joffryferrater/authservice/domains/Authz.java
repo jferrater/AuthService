@@ -1,5 +1,7 @@
 package com.github.joffryferrater.authservice.domains;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,14 +35,14 @@ public class Authz {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@JsonProperty("Role")
-	private final String role;
+	@JsonProperty("Roles")
+	private final Set<String> roles;
 	
-	@JsonProperty("Action")
-	private final String action;
+	@JsonProperty("Actions")
+	private final Set<String> actions;
 	
-	@JsonProperty("Resource")
-	private final String resource;
+	@JsonProperty("Resources")
+	private final Set<String> resources;
 	
 	@ManyToOne
 	@JoinColumn(name="GROUP_ID")
