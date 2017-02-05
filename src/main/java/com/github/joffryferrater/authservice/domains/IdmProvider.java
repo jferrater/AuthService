@@ -5,40 +5,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.github.joffryferrater.authservice.securitymanager.IdentityProvider;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Domain for Identity Management data
+ * Abstract class for identity providers.
  * 
  * @author Joffry Ferrater
  *
  */
 @Entity
-@Table (name="Idm")
+@Table(name="IdmProviders")
 @Data
 @NoArgsConstructor(force=true)
-@AllArgsConstructor
-public class Idm {
+public abstract class IdmProvider implements IdentityProvider {
 
-
-	public enum IdmType {
-		OAUTH,
-		AD,
-		LDAP,
-		MYSQL;
-	}
-	
-	@Id
+	@Id 
+	@Column(name="IdmProvider_Id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="Idm_Id")
 	private Long id;
 	
-	@JsonProperty("IDM_Type")
-	private final IdmType idmType;
+	@ManyToOne
+	@JoinColumn(name="Domain_Id")
+	@JsonIgnore
+	private final Domain domain;
 }

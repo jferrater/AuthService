@@ -31,7 +31,6 @@ public class Permission {
 	@Id 
 	@Column(name="Permission_Id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@JsonIgnore
 	private Long id;
 	
 	private final String permission;
